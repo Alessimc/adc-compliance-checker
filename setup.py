@@ -7,7 +7,9 @@ setup(
     install_requires=[
         # List package dependencies
         'xarray',
-        'pathlib'
+        'pathlib',
+        'netCDF4',
+        'h5netcdf'
     ],
     author='Alessio Canclini',
     author_email='alessioc@met.no',
