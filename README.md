@@ -19,7 +19,7 @@ File has all required attributes and they are non-empty.
 file.nc is ADC compliant!
 ```
 or
-```sh
+```plaintext
 File is missing or has empty the following required attributes:
   - id: Required if not hosted by MET (MISSING)
   - naming_authority: Required if not hosted by MET (MISSING)
