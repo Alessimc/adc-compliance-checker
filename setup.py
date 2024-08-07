@@ -6,6 +6,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         # List package dependencies
+        'xarray',
+        'pathlib'
     ],
     author='Alessio Canclini',
     author_email='alessioc@met.no',
