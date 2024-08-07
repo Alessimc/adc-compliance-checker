@@ -13,7 +13,7 @@ adc-compliance-checker <file_path>
 #### Output Example
 
 The tool will provide feeback on the compliance status of the file:
-```sh
+```plaintext
 File has all required attributes and they are non-empty.
 
 file.nc is ADC compliant!
