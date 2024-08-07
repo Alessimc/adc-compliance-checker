@@ -6,20 +6,20 @@ The compliance checker can be used in combination with CF and ACDD chekcers to e
 ## Usage
 
 ### Command Line
-'''sh
+```sh
 adc-compliance-checker <file_path>
-'''
+```
 
 #### Output
 
 The tool will provide feeback on the compliance status of the file:
-'''sh
+```sh
 File has all required attributes and they are non-empty.
 
 \033[1;32mfile.nc is ADC compliant!\033[0m
-'''
+```
 or
-'''sh
+```sh
 File is missing or has empty the following required attributes:
   - id: Required if not hosted by MET (MISSING)
   - naming_authority: Required if not hosted by MET (MISSING)
@@ -27,7 +27,7 @@ File is missing or has empty the following required attributes:
   - ...
 
 \033[1;31mfile.nc is not ADC compliant!\033[0m
-'''
+```
 
 
 ### As a Python Package
