@@ -15,8 +15,9 @@ adc-compliance-checker <file_path>
 The tool will provide feeback on the compliance status of the file:
 ```sh
 File has all required attributes and they are non-empty.
-
-\033[1;32mfile.nc is ADC compliant!\033[0m
+```
+```diff
++file.nc is ADC compliant!
 ```
 or
 ```sh
@@ -25,8 +26,9 @@ File is missing or has empty the following required attributes:
   - naming_authority: Required if not hosted by MET (MISSING)
   - summary: Required (MISSING)
   - ...
-
-\033[1;31mfile.nc is not ADC compliant!\033[0m
+```
+```diff
+-file.nc is not ADC compliant!
 ```
 
 
