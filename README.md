@@ -10,7 +10,7 @@ The compliance checker can be used in combination with CF and ACDD chekcers to e
 adc-compliance-checker <file_path>
 ```
 
-#### Output
+#### Output Example
 
 The tool will provide feeback on the compliance status of the file:
 ```sh
