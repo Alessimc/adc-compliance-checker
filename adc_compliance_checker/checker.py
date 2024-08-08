@@ -65,10 +65,10 @@ def check_compliance(file_path):
             print("- Please refer to the ADC compliance documentation to resolve these issues:")
             print("  \033[4m\033[34mhttps://adc.met.no/node/4\033[0m")
             print("\nResult:\n=======")
-            result = f"\n❌ {file_path.name} metadata\x1b[1;31m is not ADC compliant!\033[0m"
+            result = f"❌ {file_path.name} metadata\x1b[1;31m is not ADC compliant!\033[0m"
         else:
             print("\nSummary:\n========")
             print("- File metadata has all required attributes and they are non-empty.")
             print("\nResult:\n=======")
-            result = f"\n✅ {file_path.name} metadata\x1b[1;32m is ADC compliant!\033[0m"
+            result = f"✅ {file_path.name} metadata\x1b[1;32m is ADC compliant!\033[0m"
     return result
