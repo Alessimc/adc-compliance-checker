@@ -45,6 +45,3 @@ Result:
 ❌ file.nc metadata is not ADC compliant!
 
 ```
-
-
-### As a Python Package
