@@ -51,13 +51,24 @@ def check_compliance(file_path):
 
         # Print the results
         if missing_attributes or empty_attributes:
-            print("\nFile is missing or has empty the following required attributes:")
+            print("\nFile is missing or has empty the following required global attributes:")
+            print("======================================================================")
             for attr in missing_attributes:
-                print(f"  - {attr}: {required_attributes[attr]} (MISSING)")
+                print(f"  - {attr}: {required_attributes[attr]}   (MISSING)")
             for attr in empty_attributes:
                 print(f"  - {attr}: {required_attributes[attr]} (EMPTY)")
-            result = f"\n{file_path.name}\x1b[1;31m is not ADC compliant!\033[0m"
+            print("\nSummary:\n========")
+            if len(missing_attributes) > 0:
+                print(f"- {len(missing_attributes)} required global attributes are missing.")
+            if len(empty_attributes) > 0:
+                print(f"- {len(empty_attributes)} required global attributes are empty.")
+            print("- Please refer to the ADC compliance documentation to resolve these issues.")
+            print("  \033[4m\033[34mhttps://adc.met.no/node/4\033[0m")
+            print("\nResult:\n=======")
+            result = f"\n❌ {file_path.name}\x1b[1;31m is not ADC compliant!\033[0m"
         else:
-            print("File has all required attributes and they are non-empty.")
-            result = f"\n{file_path.name}\x1b[1;32m is ADC compliant!\033[0m"
+            print("\nSummary:\n========")
+            print("- File has all required attributes and they are non-empty.")
+            print("\nResult:\n=======")
+            result = f"\n✅ {file_path.name}\x1b[1;32m is ADC compliant!\033[0m"
     return result
