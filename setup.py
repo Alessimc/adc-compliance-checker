@@ -1,9 +1,22 @@
-from setuptools import setup, find_packages
+import setuptools
+import os
+import re
 
-setup(
+
+def read_version():
+    version_file = os.path.join(os.path.dirname(__file__), 'adc_compliance_checker', '__init__.py')
+    with open(version_file, 'r') as f:
+        version_content = f.read()
+        match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", version_content, re.MULTILINE)
+        if match:
+            return match.group(1)
+        raise RuntimeError("Unable to find version string.")
+
+
+setuptools.setup(
     name='adc-compliance-checker',
-    version='0.2.1',
-    packages=find_packages(),
+    version=read_version(),  # Use the version from __init__.py
+    packages=setuptools.find_packages(),
     install_requires=[
         'xarray',
         'pathlib',
